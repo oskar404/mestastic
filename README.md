@@ -35,5 +35,16 @@ The Flasher page had some hicups - it reserved the serial port and the complaine
 that the port was in use. Page reload and just follow the steps without too much
 manual configuration fixed the issue.
 
+Confusing Flasher page console message:
+
+    "Hard resetting via RTS pin..."
+
+just meant that the reset button should be pressed.
+
 The mobile phone app found the device. Now the next step is to figure out how to
 change the name of the node to a name which I can remember.
+
+## Configuration
+
+Region: European Union 868MHz
+Presets: Long Range - Fast
