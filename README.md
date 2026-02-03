@@ -48,3 +48,29 @@ change the name of the node to a name which I can remember.
 
 Region: European Union 868MHz
 Presets: Long Range - Fast
+
+## Mesh Monitor Docker Setup
+
+Information source: https://meshmonitor.org/configurator.html
+
+Install Docker:
+
+    sudo apt install docker.io docker-compose-v2
+
+Configure user to be able to run docker without `sudo`:
+
+    sudo usermod -aG docker ${USER}
+    
+And logout and login again or start a new shell with comand: `su - ${USER}`
+
+Check that `docker` group is part of active groups with command: `groups`
+
+Deployment Instructions:
+
+1. Run `docker compose up -d` to start MeshMonitor
+2. Access MeshMonitor at http://localhost:8080
+
+When logging first time in change the default password:
+
+    Username: admin
+    Password: changeme

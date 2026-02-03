@@ -1,0 +1,21 @@
+services:
+  meshmonitor:
+    image: ghcr.io/yeraze/meshmonitor:latest
+    container_name: meshmonitor
+    ports:
+      - "8080:3001"
+      - "4404:4404"
+    restart: unless-stopped
+    volumes:
+      - meshmonitor-data:/data
+    env_file: .env
+    environment:
+      - NODE_ENV=development
+      - TZ=Europe/Helsinki
+      - MESHTASTIC_NODE_IP=192.168.100.2
+      - ALLOWED_ORIGINS=http://localhost:8080
+      - ENABLE_VIRTUAL_NODE=true
+
+volumes:
+  meshmonitor-data:
+    driver: local
