@@ -94,7 +94,7 @@ and `nmap` did not find any open ports:
 
 => The heltec firmware does not seem support the HTTP connection
 
-### Serial Bridge Connection
+## Serial Bridge Connection
 
 Information source: https://meshmonitor.org/configuration/serial-bridge.html
 
@@ -104,7 +104,7 @@ The device seems to connect to: `/dev/ttyACM0`
 
 => complex stuff let's try something else
 
-### Next try python3
+## Next try python3 esptool
 
 https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/cli-script/
 
@@ -122,3 +122,27 @@ https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/cli-script/
 
     A fatal error occurred: Failed to connect to Espressif device: No serial data received.
     For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+
+## Python3 meshtastic package
+
+Information source: https://meshtastic.org/docs/software/python/cli/installation/
+
+Prepare virtual environment:
+
+    sudo install pipenv
+    pipenv shell
+
+Install packages:
+
+    pip3 install --upgrade pytap2
+    pip3 install --upgrade meshtastic
+
+Test USB connection:
+
+    meshtastic  --serial /dev/ttyACM0
+
+and got response from the command: `Connected to radio`
+
+Usage information: https://meshtastic.org/docs/software/python/cli/usage/
+
+Next step is how to configure the radio device ..
