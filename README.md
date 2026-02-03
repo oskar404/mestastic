@@ -60,7 +60,7 @@ Install Docker:
 Configure user to be able to run docker without `sudo`:
 
     sudo usermod -aG docker ${USER}
-    
+
 And logout and login again or start a new shell with comand: `su - ${USER}`
 
 Check that `docker` group is part of active groups with command: `groups`
@@ -74,3 +74,20 @@ When logging first time in change the default password:
 
     Username: admin
     Password: changeme
+
+=> was not able to connect .. the `ping` responded:
+
+    > ping 192.168.100.2
+    PING 192.168.100.2 (192.168.100.2) 56(84) bytes of data.
+    64 bytes from 192.168.100.2: icmp_seq=1 ttl=64 time=11.1 ms
+
+and `nmap` did not find any open ports:
+
+    > nmap 192.168.100.2
+    Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-02-03 21:11 EET
+    Nmap scan report for 192.168.100.2
+    Host is up (0.024s latency).
+    All 1000 scanned ports on 192.168.100.2 are in ignored states.
+    Not shown: 1000 closed tcp ports (conn-refused)
+
+    Nmap done: 1 IP address (1 host up) scanned in 2.87 seconds
