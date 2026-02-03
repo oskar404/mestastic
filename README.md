@@ -91,3 +91,19 @@ and `nmap` did not find any open ports:
     Not shown: 1000 closed tcp ports (conn-refused)
 
     Nmap done: 1 IP address (1 host up) scanned in 2.87 seconds
+
+=> The heltec firmware does not seem support the HTTP connection
+
+### Serial Bridge Connection
+
+Information source: https://meshmonitor.org/configuration/serial-bridge.html
+
+    "Serial Bridge is a Docker-based application"
+
+The device seems to connect to: `/dev/ttyACM0`
+
+=> complex stuff let's try something else
+
+### Next try python3
+
+https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/cli-script/
