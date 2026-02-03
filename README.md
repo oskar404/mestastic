@@ -107,3 +107,18 @@ The device seems to connect to: `/dev/ttyACM0`
 ### Next try python3
 
 https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/cli-script/
+
+    sudo install pipenv
+    pipenv shell
+    python3 -m pip install esptool
+    esptool --port /dev/ttyACM0 chip-id
+
+=> no response
+
+    > esptool --port /dev/ttyACM0 chip-id
+    esptool v5.1.0
+    Serial port /dev/ttyACM0:
+    Connecting......................................
+
+    A fatal error occurred: Failed to connect to Espressif device: No serial data received.
+    For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
