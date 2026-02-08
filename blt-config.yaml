@@ -1,0 +1,7 @@
+config:
+  bluetooth:
+    enabled: true
+    mode: 2
+    fixedPin: <add-6-digit-pin-code-here>
+  network:
+    wifiEnabled: false

@@ -139,10 +139,31 @@ Install packages:
 
 Test USB connection:
 
-    meshtastic  --serial /dev/ttyACM0
+    meshtastic --serial /dev/ttyACM0
 
 and got response from the command: `Connected to radio`
 
 Usage information: https://meshtastic.org/docs/software/python/cli/usage/
 
 Next step is how to configure the radio device ..
+
+## More Hacking
+
+To get info:
+
+    meshtastic --info
+
+To set configuration from Yaml
+
+    meshtastic --configure blt-config.yaml
+
+For some reason I can't find this new device in the iPhone app when in bluetooth.
+In the computer the device was visible. And turning back to Wifi and normal UI
+is not possible. The device is in somekind of weird config now.
+
+Maybe full erase / flash to remove all the data is the solution
+
+Settng the bluetooth mode to FIXED_PIN solved the iPhone application connection
+problem:
+
+    meshtastic --set bluetooth.mode 2

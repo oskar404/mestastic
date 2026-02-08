@@ -1,0 +1,5 @@
+config:
+  network:
+    wifiEnabled: true
+  bluetooth:
+    enabled: false
