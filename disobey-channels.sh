@@ -15,19 +15,19 @@ pipenv run meshtastic -s $PORT \
   --set position.position_broadcast_smart_enabled false \
   --set position.fixed_position false \
   --remove-position
-read -p "Check reboot. Press Enter to continue..."
+read -p "Reboot/reset device. Press Enter to continue..."
 
 pipenv run meshtastic -s $PORT \
   --set lora.use_preset true \
   --set lora.modem_preset SHORT_FAST
-read -p "Check reboot. Press Enter to continue..."
+read -p "Reboot/reset device. Press Enter to continue..."
 
 pipenv run meshtastic -s $PORT \
   --set lora.ignore_mqtt true \
   --set lora.config_ok_to_mqtt false \
   --set device.role CLIENT \
   --set mqtt.enabled false
-read -p "Check reboot. Press Enter to continue..."
+read -p "Reboot/reset device. Press Enter to continue..."
 
 pipenv run meshtastic -s $PORT --ch-index 0 \
   --ch-set name Disobey \
@@ -35,7 +35,7 @@ pipenv run meshtastic -s $PORT --ch-index 0 \
   --ch-set uplink_enabled false \
   --ch-set downlink_enabled false \
   --ch-set module_settings.position_precision 0
-read -p "Check reboot. Press Enter to continue..."
+read -p "Reboot/reset device. Press Enter to continue..."
 
 pipenv run meshtastic -s $PORT --ch-index 1 \
   --ch-set name MeshChat \
@@ -43,6 +43,6 @@ pipenv run meshtastic -s $PORT --ch-index 1 \
   --ch-set uplink_enabled false \
   --ch-set downlink_enabled false \
   --ch-set module_settings.position_precision 0
-#read -p "Check reboot. Press Enter to continue..."
+read -p "Reboot/reset device. Press Enter to continue..."
 
 echo "DONE"
