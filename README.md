@@ -1,17 +1,17 @@
 
-# Mestastic Hacking
+# Mes(h)tastic Hacking
 
 Device: Heltec WiFi LoRa 32(V4), ESP32S3 + SX1262 LoRa Node
 
 https://heltec.org/project/wifi-lora-32-v4/
 
-The target is to setup mestastic software running into the device.
+The target is to setup meshtastic software running into the device.
 
 This mainly documentation for myself.
 
 ## Learnings
 
-"LoRa Error" before uploading mestastic SW just means that the device did not
+"LoRa Error" before uploading meshtastic SW just means that the device did not
 find any other device in factory mode.
 
 In Ubuntu 24.04 the Chromium is installed via snap and the access to serial port
@@ -27,7 +27,7 @@ here:
 
 but it was simpler to change to a computer with MS Edge installation.
 
-In MS Edge the [Mestastic Web Flasher](https://flasher.meshtastic.org/) page
+In MS Edge the [Meshtastic Web Flasher](https://flasher.meshtastic.org/) page
 works. The page has Heltec V4 support and nicely provides the latest SW which
 was at the time of the installation 2.7.15.
 
